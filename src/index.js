@@ -5,6 +5,11 @@ import "./index.css";
 
 // My first component
 function App() {
+
+    const paraStyle = {
+        "marginBottom": "15px"
+    };
+
   return (
 
     <div className="app">
@@ -12,8 +17,12 @@ function App() {
         <header className="app-header">
             <h1>My Amazing ToDo-List App</h1>
 
-            <p>The most simple and amazing todo-list React App.</p>
-            
+            <p style={paraStyle}>The most simple and amazing todo-list React App.</p>
+            <ul >
+                <li className="task-item">Add me on Facebook</li>
+                <li className="task-item">Connect on LinkedIn</li>
+                <li className="task-item">Subscribe to my Youtube Channel</li>
+            </ul>
         </header>
     </div>
   );

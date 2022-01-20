@@ -17,7 +17,7 @@ body{
     text-align: center;
   }
   
-  .app-header {
+.app-header {
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
@@ -26,4 +26,17 @@ body{
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    padding: 20px;
+
+}
+ul {
+    list-style: none;
+    width: 50%;
+  }
+  
+.tasks-item {
+    border: 1px solid #d3d3d30f;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
   }
