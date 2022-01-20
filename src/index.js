@@ -4,6 +4,16 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 // My first component
+function TaskList (){
+    return (
+        <ul >
+                <li className="task-item">Add me on Facebook</li>
+                <li className="task-item">Connect on LinkedIn</li>
+                <li className="task-item">Subscribe to my Youtube Channel</li>
+            </ul>
+    );
+
+}
 function App() {
 
     const paraStyle = {
@@ -18,11 +28,8 @@ function App() {
             <h1>My Amazing ToDo-List App</h1>
 
             <p style={paraStyle}>The most simple and amazing todo-list React App.</p>
-            <ul >
-                <li className="task-item">Add me on Facebook</li>
-                <li className="task-item">Connect on LinkedIn</li>
-                <li className="task-item">Subscribe to my Youtube Channel</li>
-            </ul>
+            
+            <TaskList />
         </header>
     </div>
   );
