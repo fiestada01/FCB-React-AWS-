@@ -4,13 +4,23 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 // My first component
+function Task(props){
+    
+    return (
+        <li className="task-item">{props.taskName}</li>
+
+    );
+}
+
+
 function TaskList (){
     return (
         <ul >
-                <li className="task-item">Add me on Facebook</li>
-                <li className="task-item">Connect on LinkedIn</li>
-                <li className="task-item">Subscribe to my Youtube Channel</li>
-            </ul>
+            <Task taskName="Add me on Facebook"/>
+            <Task taskName="Connect in LinkedIn"/> 
+            <Task taskName="Subscribe to Youtube Channel"/> 
+             
+        </ul>
     );
 
 }
