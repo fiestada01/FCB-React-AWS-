@@ -4,29 +4,38 @@ import Task from "./Task";
 
 function TaskList (){
 
-    const taskItemList = [
+    const [taskItemList, setTaskItemsList] = useState([
         "Add me on Facebook",
         "Connect in LinkedIn",
         "Subscribe to Youtube Channel",
         "Add me on Instagram"        
 
-    ];
+    ]);
 
-    const [taskValue, setTaskValue] = useState("Juast another task");
-   // console.log("taskvalue: ", taskValue);
+    const [taskValue, setTaskValue] = useState("");
+   
 
     const inputChangeHandler = (e)=>{
         setTaskValue(e.target.value)
     };
-    
+
+
+    const addTaskHandler = (e) => {
+        setTaskItemsList([e.target.value, ...taskItemList]);
+        setTaskValue("");
+      };
+
     return (
 
         <div>
 
-            <input className="task-iput" 
-            placeholder="Create new task"
-            onChange={inputChangeHandler}
-            />
+    <input
+        className="task-input"
+        placeholder="Create a new task"
+        onChange={inputChangeHandler}
+        onBlur={addTaskHandler}
+        value={taskValue}
+      />
 
         <ul >
             {taskItemList.map((task, index)=>{
