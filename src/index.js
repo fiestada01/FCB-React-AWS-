@@ -24,6 +24,10 @@ function TaskList (){
     ];
 
     return (
+
+        <div>
+
+            <input className="task-iput"/>
         <ul >
             {taskItemList.map((task, index)=>{
                 
@@ -32,6 +36,8 @@ function TaskList (){
             })}
              
         </ul>
+
+        </div>
     );
 
 }
