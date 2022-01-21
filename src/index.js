@@ -14,11 +14,22 @@ function Task(props){
 
 
 function TaskList (){
+
+    const taskItemList = [
+        "Add me on Facebook",
+        "Connect in LinkedIn",
+        "Subscribe to Youtube Channel",
+        "Add me on Instagram"        
+
+    ];
+
     return (
         <ul >
-            <Task taskName="Add me on Facebook"/>
-            <Task taskName="Connect in LinkedIn"/> 
-            <Task taskName="Subscribe to Youtube Channel"/> 
+            {taskItemList.map((task, index)=>{
+                
+
+               return <Task key={index} taskName={task} />;
+            })}
              
         </ul>
     );
